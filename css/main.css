@@ -92,11 +92,9 @@ a {
 .header-links {
   align-items: center;
   display: flex;
-  height: 5vh;
+  height: 10vh;
   width: 100%;
-  top: 0;
   justify-content: center;
-  z-index: 99;
 }
 .header-links li {
   text-align: center;
@@ -115,3 +113,29 @@ a {
   height: 100vh;
   width: 100vw;
 }
+.track {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  padding: 20px;
+}
+.track-name {
+  background-image: linear-gradient(to right, white, transparent);
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  padding: 2rem;
+  z-index: 1;
+}
+.track-name h3 {
+  margin-top: 2rem;
+  /* text-orientation: upright; */
+  text-transform: lowercase;
+  writing-mode: vertical-lr;
+}
+/* .track-lyrics {
+  display: none;
+}
+.track-lyrics:hover {
+  display: inline-block;
+} */
