@@ -17,6 +17,7 @@ a {
   padding: 0;
   height: 100vh;
   width: 100vw;
+  min-width: 580px;
 }
 .hero-section {
   align-items: center;
@@ -44,6 +45,7 @@ a {
 }
 .hero_cr {
   font-size: 3rem;
+  font-weight: 300;
   padding-bottom: 1.7rem;
   padding-right: 0.4rem;
   position: absolute;
@@ -155,6 +157,7 @@ a {
 .songs {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   height: 70vh;
   max-width: 100vw;
   padding: 3rem;
@@ -175,6 +178,9 @@ a {
   padding-right: 2rem;
   padding-left: 0;
   z-index: 1;
+}
+.track-name h3 {
+  font-weight: 300;
 }
 .track-name:hover + .track-lyrics {
   animation: lyrics-appear 0.5s forwards ease-out;
@@ -197,6 +203,18 @@ a {
   writing-mode: vertical-lr;
 }
 .track-lyrics {
-  padding-right: 2rem;
+  padding-right: 3rem;
   transform: translateX(-120%);
+}
+.track-lyrics p {
+  font-size: 0.8rem;
+  line-height: 1.3rem;
+}
+
+/* ----------------- MEDIA QUERIES ----------------- */
+@media (max-width: 640px) {
+  .track {
+    max-height: 100vh;
+    min-width: 100%;
+  }
 }
