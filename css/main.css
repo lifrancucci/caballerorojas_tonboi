@@ -58,34 +58,79 @@ a {
   justify-content: center;
   transform: rotate(45deg);
 }
+.hero-title {
+  display: flex;
+  flex-direction: row;
+}
 .figure {
   align-items: center;
-  border: 1px solid black;
   box-sizing: border-box;
   display: flex;
   height: 80%;
   justify-content: center;
   width: 80%;
-  /* transform: rotate(10deg); */
 }
 .figure1 {
   background-color: black;
+  border: 10px solid black;
+  animation: fig1-anim 5s infinite linear;
+}
+@keyframes fig1-anim {
+  0%, 24% {
+    background-color: black
+  }
+  25%, 49% {
+    background-color: white;
+    border-color: white black;
+  }
+  50%, 74% {
+    background-color: black;
+    border-color: black white;
+  }
+  75%, 99% {
+    background-color: white;
+
+  }
 }
 .figure2 {
-  background-color: black;
-  border: 40px solid white;
-  /* width: 80%;
-  height: 80%; */
+  background-color: white;
+  border: 10px solid white;
+  animation: fig2-anim 5s infinite linear;
+}
+@keyframes fig2-anim {
+  0%, 24% {
+    background-color: white;
+    border-color: black white;
+  }
+  25%, 49% {
+    background-color: black;
+  }
+  50%, 74% {
+    background-color: white;
+    border-color: white black;
+  }
+  75%, 99% {
+    background-color: white;
+  }
 }
 .figure3 {
   background-color: white;
   border: 40px solid black;
-  /* width: 80%;
-  height: 80%; */
+  animation: fig3-anim 5s infinite linear;
 }
-.hero-title {
-  display: flex;
-  flex-direction: row;
+@keyframes fig3-anim {
+  0% {
+    border-color: black white;
+  }
+  25% {
+    border-color: white black;
+  }
+  50% {
+    border-color: white black;
+  }
+  75%{
+    border-color: black white;
+  }
 }
 
 /* ----------------- HEADER LINKS ----------------- */
