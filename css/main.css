@@ -110,32 +110,48 @@ a {
 .songs {
   display: flex;
   flex-direction: row;
-  height: 100vh;
-  width: 100vw;
+  height: 70vh;
+  max-width: 100vw;
+  padding: 3rem;
+
 }
 .track {
   display: flex;
   flex-direction: row;
   flex: 1;
-  padding: 20px;
+  overflow: hidden;
+  padding-top: 2rem;
 }
 .track-name {
   background-image: linear-gradient(to right, white, transparent);
   display: flex;
   flex-direction: column;
   font-size: 1.5rem;
-  padding: 2rem;
+  padding-right: 2rem;
+  padding-left: 0;
   z-index: 1;
 }
+.track-name:hover + .track-lyrics {
+  animation: lyrics-appear 0.5s forwards ease-out;
+}
+@keyframes lyrics-appear {
+  100% {
+    transform: translateX(0%);
+  }
+}
+.track-name p {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding-top: 0.4rem;
+}
 .track-name h3 {
-  margin-top: 2rem;
+  margin-top: 1rem;
   /* text-orientation: upright; */
   text-transform: lowercase;
   writing-mode: vertical-lr;
 }
-/* .track-lyrics {
-  display: none;
+.track-lyrics {
+  padding-right: 2rem;
+  transform: translateX(-120%);
 }
-.track-lyrics:hover {
-  display: inline-block;
-} */
