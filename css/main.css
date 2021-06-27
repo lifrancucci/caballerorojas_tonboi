@@ -148,7 +148,7 @@ a {
   margin: 0 0.5em;
 }
 .header-links i {
-  padding: 3rem;
+  padding: 0 2.5rem;
   font-size: 1.5rem;
 }
 .fixed-nav nav {
@@ -168,10 +168,11 @@ a {
   justify-content: center;
   display: flex;
   height: 80vh;
+  width: 100vw;
   overflow: hidden;
 }
 .cover-container {
-  border-radius: 50%;
+  /* border-radius: 50%; */
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -179,19 +180,19 @@ a {
   max-height: 450px;
   overflow: hidden;
 }
-.cover-gradient {
-  border-radius: 50%;
-  background-image:
-    radial-gradient(transparent 50%, white 70%);
-  position: absolute;
-  width: 450px;
-  height: 450px;
-}
 .album-cover img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   max-width: 800px;
+}
+.cover-gradient {
+  /* border-radius: 50%; */
+  background-image:
+    radial-gradient(transparent 50%, white 70%);
+  position: absolute;
+  width: 450px;
+  height: 450px;
 }
 
 
@@ -232,11 +233,15 @@ a {
     transform: translateX(0%);
   }
 }
-.track-name p {
+.track-number {
+  align-items: flex-end;
+  justify-content: center;
+  display: flex;
+  width: 2rem;
+  height: 2rem;
   background-color: black;
   color: white;
   text-align: center;
-  padding-top: 0.4rem;
 }
 .track-name h3 {
   margin-top: 1rem;
@@ -249,8 +254,8 @@ a {
   transform: translateX(-120%);
 }
 .track-lyrics p {
-  font-size: 0.8rem;
-  line-height: 1.3rem;
+  font-size: 0.7rem;
+  line-height: 1.1rem;
 }
 
 /* ----------------- MEDIA QUERIES ----------------- */
