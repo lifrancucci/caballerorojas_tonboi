@@ -17,7 +17,6 @@ a {
   padding: 0;
   height: 100vh;
   width: 100vw;
-  min-width: 580px;
 }
 .hero-section {
   align-items: center;
@@ -54,8 +53,8 @@ a {
 .hero-figures {
   display: flex;
   margin: 10vh auto;
-  height: 500px;
-  width: 500px;
+  height: 400px;
+  width: 400px;
   align-items: center;
   justify-content: center;
   transform: rotate(45deg);
@@ -152,6 +151,49 @@ a {
   padding: 3rem;
   font-size: 1.5rem;
 }
+.fixed-nav nav {
+  position: fixed;
+}
+.nav-link {
+  box-sizing: border-box;
+  display: inline-block;
+}
+.fixed-nav .nav-link {
+  display: inline-block;
+}
+
+/* ----------------- SONGS SECTION ----------------- */
+.album-cover {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 80vh;
+  overflow: hidden;
+}
+.cover-container {
+  border-radius: 50%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  max-width: 450px;
+  max-height: 450px;
+  overflow: hidden;
+}
+.cover-gradient {
+  border-radius: 50%;
+  background-image:
+    radial-gradient(transparent 50%, white 70%);
+  position: absolute;
+  width: 450px;
+  height: 450px;
+}
+.album-cover img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+}
+
 
 /* ----------------- SONGS SECTION ----------------- */
 .songs {

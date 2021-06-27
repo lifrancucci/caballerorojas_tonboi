@@ -9,9 +9,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;300;500;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d6cbd5908a.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded",
+      function() {
+        contentLoaded();
+      });
+    </script>
   </head>
 
   <body>
+
+    <!-- ............. HEADER SECTION ............. -->
     <header class="header">
       <div class="hero-section">
         <p class="hero_cr">CR</p>
@@ -27,27 +36,37 @@
           <h2 class="hero-record">Ton Boi</h2>
         </div>
       </div>
-      <div class="header-links">
+      <nav id="headerLinks" class="header-links">
         <ul>
           <li>
-            <a href="https://www.instagram.com/caballerorojas_music/" target="_blank" rel="noopener noreferrer">
+            <a class="nav-link" href="https://www.instagram.com/caballerorojas_music/" target="_blank" rel="noopener noreferrer">
               <i class="fab fa-instagram"></i>
             </a>
           </li>
           <li>
-            <a href="https://caballerorojas.bandcamp.com/album/ton-boi" target="_blank" rel="noopener noreferrer">
+            <a class="nav-link" href="https://caballerorojas.bandcamp.com/album/ton-boi" target="_blank" rel="noopener noreferrer">
               <i class="fab fa-bandcamp"></i>
             </a>
           </li>
           <li>
-            <a href="https://open.spotify.com/artist/4oxXyd7DeECIp8rlMpHfTE?si=eCNzDB_jTpyf7hHMuHmO7A&dl_branch=1" target="_blank" rel="noopener noreferrer">
+            <a class="nav-link" href="https://open.spotify.com/artist/4oxXyd7DeECIp8rlMpHfTE?si=eCNzDB_jTpyf7hHMuHmO7A&dl_branch=1" target="_blank" rel="noopener noreferrer">
               <i class="fab fa-spotify"></i>
             </a>
           </li>
         </ul>
-      </div>
+      </nav>
     </header>
 
+    <!-- ............. COVER SECTION ............. -->
+    <div class="album-cover">
+      <div class="cover-container">
+        <div class="cover-gradient"></div>
+        <img src="images/ton_boi_cover.jpeg" alt="ton boi album cover">
+      </div>
+    </div>
+
+
+    <!-- ............. SONGS SECTION ............. -->
     <div class="songs">
       <div class="track track1">
         <div class="track-name">
