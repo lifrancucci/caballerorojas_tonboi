@@ -222,7 +222,54 @@ a {
   z-index: 1;
 }
 .track-name h3 {
+  margin-top: 1rem;
   font-weight: 300;
+  text-transform: lowercase;
+  writing-mode: vertical-lr;
+}
+.track-name button {
+  display: none;
+  align-self: center;
+  background-color: black;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 1.1rem;
+  padding-left: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+}
+.track-name p {
+  display: flex;
+  background-color: black;
+  color: white;
+  align-items: flex-end;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+}
+.track-play {
+  display: flex;
+  background-color: black;
+  align-items: flex-end;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+}
+.track-play button {
+  align-self: center;
+  display: none;
+  background-color: transparent;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 1.1rem;
+  padding-left: 0.5rem;
+}
+.track-number {
+  color: white;
 }
 .track-name:hover + .track-lyrics {
   animation: lyrics-appear 0.5s forwards ease-out;
@@ -231,22 +278,6 @@ a {
   100% {
     transform: translateX(0%);
   }
-}
-.track-number {
-  align-items: flex-end;
-  justify-content: center;
-  display: flex;
-  width: 2rem;
-  height: 2rem;
-  background-color: black;
-  color: white;
-  text-align: center;
-}
-.track-name h3 {
-  margin-top: 1rem;
-  /* text-orientation: upright; */
-  text-transform: lowercase;
-  writing-mode: vertical-lr;
 }
 .track-lyrics {
   padding-right: 3rem;
