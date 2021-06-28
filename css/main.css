@@ -249,28 +249,6 @@ a {
   height: 2rem;
   text-align: center;
 }
-.track-play {
-  display: flex;
-  background-color: black;
-  align-items: flex-end;
-  justify-content: center;
-  width: 2rem;
-  height: 2rem;
-  text-align: center;
-}
-.track-play button {
-  align-self: center;
-  display: none;
-  background-color: transparent;
-  border: none;
-  color: white;
-  text-align: center;
-  font-size: 1.1rem;
-  padding-left: 0.5rem;
-}
-.track-number {
-  color: white;
-}
 .track-name:hover + .track-lyrics {
   animation: lyrics-appear 0.5s forwards ease-out;
 }
