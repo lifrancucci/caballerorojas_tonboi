@@ -1,6 +1,8 @@
 /* ----------------- MAIN STYLES ----------------- */
 body {
   font-family: 'Spartan', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 a {
   color: inherit;
@@ -11,10 +13,9 @@ a {
 .header {
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
   align-items: center;
   justify-content: center;
-  margin: 0;
-  padding: 0;
   height: 100vh;
   width: 100vw;
 }
@@ -23,11 +24,10 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 80vh;
-  margin-top: -5vh;
+  height: 85vh;
 }
 .hero-cr {
-  font-size: 2.5rem;
+  font-size: 5rem;
   font-weight: 300;
   padding-top: 1rem;
   transform: rotate(-45deg);
@@ -36,19 +36,19 @@ a {
 .hero-figures {
   display: flex;
   margin: 10vh auto;
-  height: 60vh;
-  width: 60vh;
+  height: 80vw;
+  width: 80vw;
   align-items: center;
   justify-content: center;
   transform: rotate(45deg);
 }
 .figure {
-  align-items: center;
-  box-sizing: border-box;
   display: flex;
-  height: 80%;
+  box-sizing: border-box;
+  align-items: center;
   justify-content: center;
-  width: 80%;
+  height: 75%;
+  width: 75%;
 }
 .figure1 {
   background-color: black;
@@ -95,7 +95,7 @@ a {
 }
 .figure3 {
   background-color: white;
-  border: 40px solid black;
+  border: 60px solid black;
   animation: fig3-anim 5s infinite linear;
 }
 @keyframes fig3-anim {
@@ -115,49 +115,51 @@ a {
 
 
 /* ----------------- LINKS SECTION ----------------- */
-.header-links {
+.nav {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 10vh;
+  background-color: white;
+  height: 15vh;
   width: 100%;
+  top: 0;
+  z-index: 99;
 }
-.header-title {
+.nav-title {
   align-items: center;
   display: flex;
   flex-direction: row;
-  font-size: 1.5rem;
+  font-size: 3rem;
   font-weight: 100;
-  height: 10vh;
   text-align: center;
   text-transform: lowercase;
-  margin-bottom: 1.5rem;
+  padding-left: 0.7rem;
+  margin-bottom: 2.5rem;
 }
-.header-name {
+.nav-name {
   letter-spacing: -0.05rem;
   padding: 0.75rem;
 }
-.header-record {
+.nav-record {
   font-weight: 300;
   letter-spacing: 0.8rem;
   padding: 0.75rem;
 }
-.header-links li {
+.nav li {
   text-align: center;
   display: inline-block;
-  margin: 0 0.5rem;
 }
-.header-links i {
-  padding: 0 2.5rem;
-  font-size: 1.5rem;
+.nav i {
+  padding: 0 6rem;
+  font-size: 2.5rem;
 }
 .nav-link {
   box-sizing: border-box;
   display: inline-block;
 }
-.fixed-nav .nav-link {
-  display: inline-block;
+.fixed-nav .nav {
+  position: fixed;
 }
 
 /* ----------------- COVER SECTION ----------------- */
@@ -165,7 +167,7 @@ a {
   align-items: center;
   justify-content: center;
   display: flex;
-  height: 80vh;
+  height: 85vh;
   width: 100vw;
   overflow: hidden;
 }
@@ -173,23 +175,24 @@ a {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  width: 450px;
-  height: 450px;
+  width: 800px;
+  height: 800px;
   overflow: hidden;
 }
 .album-cover img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 800px;
+  width: 150vw;
 }
 .cover-gradient {
   pointer-events: none;
+  box-sizing: border-box;
   background-image:
-    radial-gradient(transparent 50%, white 70%);
+    radial-gradient(transparent 50%, white 65%);
   position: absolute;
-  width: 450px;
-  height: 450px;
+  width: 810px;
+  height: 810px;
 }
 
 
@@ -198,7 +201,7 @@ a {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  max-height: 90vh;
+  height: 100vh;
   max-width: 100vw;
   padding: 3rem;
   margin-bottom: 5vh;
@@ -267,7 +270,7 @@ a {
 /* ----------------- MEDIA QUERIES ----------------- */
 
 /* ORIENTATION */
-@media screen and (orientation: portrait)  {
+/* @media screen and (orientation: portrait)  {
   .hero-cr {
     font-size: 4rem;
   }
@@ -275,21 +278,17 @@ a {
     width: 70vw;
     height: 70vw;
   }
-}
+} */
 
-/* PHONE ONLY */
-@media screen and (max-width: 599px) {
-
-}
 /* TABLET PORTRAIT UP */
 @media (min-width: 600px) {
-  .header-title {
+  /* .header-title {
     font-size: 3rem;
   }
   .header-links i {
     font-size: 3rem;
     padding: 0 5rem;
-  }
+  } */
 }
 
 /* TABLET LANDSCAPE UP */
