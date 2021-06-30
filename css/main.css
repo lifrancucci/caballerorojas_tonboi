@@ -13,7 +13,7 @@ a {
 .header {
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
+  overflow: hidden;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -150,13 +150,13 @@ a {
   text-align: center;
   display: inline-block;
 }
-.nav i {
-  padding: 0 6rem;
-  font-size: 3.5rem;
-}
 .nav-link {
   box-sizing: border-box;
   display: inline-block;
+}
+.nav-link i {
+  padding: 0 6rem;
+  font-size: 3.5rem;
 }
 .fixed-nav .nav {
   position: fixed;
@@ -262,6 +262,7 @@ a {
   font-size: 1.5rem;
   line-height: 2rem;
   padding-top: 3rem;
+  text-transform: lowercase;
 }
 
 /* ----------------- MEDIA QUERIES ----------------- */
@@ -269,25 +270,26 @@ a {
 /* ORIENTATION */
 @media screen and (orientation: landscape)  {
   .hero-figures {
-    width: 70vh;
-    height: 70vh;
+    width: 65vh;
+    height: 65vh;
   }
 }
 
 /* TABLET PORTRAIT UP */
 @media (min-width: 600px) {
-  /* .header-title {
+  .nav-title {
     font-size: 3rem;
+    margin-bottom: 0.5rem;
   }
-  .header-links i {
+  .nav-link i {
     font-size: 3rem;
     padding: 0 5rem;
-  } */
+  }
 }
 
 /* TABLET LANDSCAPE UP */
 @media (min-width: 900px) {
-
+  
 }
 
 /* DESKTOP UP */
