@@ -130,7 +130,7 @@ a {
   align-items: center;
   display: flex;
   flex-direction: row;
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 100;
   text-align: center;
   text-transform: lowercase;
@@ -139,12 +139,12 @@ a {
 }
 .nav-name {
   letter-spacing: -0.05rem;
-  padding: 0.75rem;
+  padding: 1rem;
 }
 .nav-record {
   font-weight: 300;
   letter-spacing: 0.8rem;
-  padding: 0.75rem;
+  padding: 1rem;
 }
 .nav li {
   text-align: center;
@@ -152,7 +152,7 @@ a {
 }
 .nav i {
   padding: 0 6rem;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
 }
 .nav-link {
   box-sizing: border-box;
@@ -195,62 +195,52 @@ a {
   height: 810px;
 }
 
-
 /* ----------------- SONGS SECTION ----------------- */
 .songs {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  height: 100vh;
-  max-width: 100vw;
-  padding: 3rem;
-  margin-bottom: 5vh;
+  align-items: center;
 }
 .track {
   display: flex;
   flex-direction: row;
-  flex: 1;
+  width: 80%;
+  min-height: 700px;
   overflow: hidden;
-  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
 }
 .track-name {
-  background-image: linear-gradient(to right, white, transparent);
   display: flex;
   flex-direction: column;
-  font-size: 1.5rem;
-  padding-right: 1rem;
-  padding-left: 0;
+  align-items: center;
+  font-size: 3rem;
+  padding: 0 2rem 2rem 2rem;
+  max-width: 15rem;
+  margin-left: -1rem;
+  background-image:
+    linear-gradient(to right, white 90%, transparent);
   z-index: 1;
 }
 .track-name h3 {
-  margin-top: 1rem;
+  align-self: center;
+  padding-top: 3rem;
   font-weight: 300;
   text-transform: lowercase;
   writing-mode: vertical-lr;
 }
-.track-name button {
-  display: none;
-  align-self: center;
-  background-color: black;
-  border: none;
-  color: white;
-  text-align: center;
-  font-size: 1.1rem;
-  padding-left: 0.5rem;
-  width: 2rem;
-  height: 2rem;
-}
-.track-name p {
+.track-number {
   display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: black;
   color: white;
-  align-items: flex-end;
-  justify-content: center;
-  width: 2rem;
-  height: 2rem;
+  width: 6rem;
+  height: 6rem;
   text-align: center;
+  margin-top: 1rem;
 }
-.track-name:hover + .track-lyrics {
+.track-name:hover + .track-interactive {
   animation: lyrics-appear 0.5s forwards ease-out;
 }
 @keyframes lyrics-appear {
@@ -258,27 +248,31 @@ a {
     transform: translateX(0%);
   }
 }
-.track-lyrics {
+.track-interactive {
   padding-right: 3rem;
   transform: translateX(-120%);
 }
+.media-player {
+  background-color: grey;
+  width: 100%;
+  height: 6rem;
+  margin-top: 1rem;
+}
 .track-lyrics p {
-  font-size: 0.7rem;
-  line-height: 1.1rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding-top: 3rem;
 }
 
 /* ----------------- MEDIA QUERIES ----------------- */
 
 /* ORIENTATION */
-/* @media screen and (orientation: portrait)  {
-  .hero-cr {
-    font-size: 4rem;
-  }
+@media screen and (orientation: landscape)  {
   .hero-figures {
-    width: 70vw;
-    height: 70vw;
+    width: 70vh;
+    height: 70vh;
   }
-} */
+}
 
 /* TABLET PORTRAIT UP */
 @media (min-width: 600px) {
