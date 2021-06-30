@@ -231,6 +231,7 @@ a {
 }
 .track-number {
   display: flex;
+  box-sizing: border-box;
   align-items: center;
   justify-content: center;
   background-color: black;
@@ -254,7 +255,7 @@ a {
 }
 .media-player {
   background-color: grey;
-  width: 100%;
+  width: 700px;
   height: 6rem;
   margin-top: 1rem;
 }
@@ -289,7 +290,52 @@ a {
 
 /* TABLET LANDSCAPE UP */
 @media (min-width: 900px) {
-  
+  .figure3 {
+    border: 30px solid black;
+  }
+  .hero-cr {
+    font-size: 3.5rem;
+  }
+  .nav-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .nav-link {
+    padding-bottom: 1rem;
+  }
+  .nav-link i {
+    font-size: 2rem;
+    padding: 0 5rem;
+  }
+  .cover-container {
+    width: 500px;
+    height: 500px;
+  }
+  .album-cover img {
+    width: 90vw;
+  }
+  .cover-gradient {
+    width: 510px;
+    height: 510px;
+  }
+  /* .track {
+    border: 1px solid red;
+  } */
+  .track-name {
+    font-size: 2rem;
+  }
+  .track-number {
+    font-size: 3rem;
+    padding-top: 0.5rem;
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+  .track-lyrics p {
+    font-size: 1.2rem;
+  }
+  .media-player {
+    height: 4.5rem;
+  }
 }
 
 /* DESKTOP UP */
