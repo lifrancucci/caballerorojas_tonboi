@@ -139,7 +139,8 @@ a {
   text-align: center;
   text-transform: lowercase;
   padding-left: 0.7rem;
-  margin-bottom: 2.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.2rem;
 }
 .nav-name {
   font-weight: 100;
@@ -215,6 +216,7 @@ a {
   /* border: 1px solid green; */
   display: flex;
   flex-direction: row;
+  margin-top: 1rem;
   padding-bottom: 2.5rem;
   overflow: hidden;
 }
@@ -307,13 +309,16 @@ a {
   .nav-record {
     padding-left: 0;
   }
-  .fixed-nav .nav-title {
-    display: none;
-    background-color: red;
-  }
   .track-interactive {
     padding-left: 0;
   }
+  .fixed-nav .nav {
+    position: relative;
+  }
+  .track {
+    padding-left: 1rem;
+  }
+
 }
 
 /* TABLET PORTRAIT UP */
@@ -367,18 +372,22 @@ a {
   .songs {
     flex-direction: row;
     padding: 0 3rem;
+    max-height: 85vh;
   }
   .track {
     width: 50%;
   }
   .track-name {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .track-number {
     padding-top: 0.5rem;
   }
+  .track-interactive {
+    padding-left: 0.5rem;
+  }
   .track-lyrics p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     line-height: 1.2rem;
     font-weight: 300;
   }
