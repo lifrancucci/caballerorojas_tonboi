@@ -280,12 +280,12 @@ a {
 /* ----------------- MEDIA QUERIES ----------------- */
 
 /* ORIENTATION */
-/* @media screen and (orientation: landscape)  {
+@media screen and (orientation: landscape)  {
   .hero-figures {
-    width: 65vh;
-    height: 65vh;
+    width: 50vh;
+    height: 50vh;
   }
-} */
+}
 
 /* FOR PHONE ONLY */
 @media (max-width: 599px) {
@@ -333,12 +333,31 @@ a {
 
 /* TABLET LANDSCAPE UP */
 @media (min-width: 900px) {
-
+  .songs {
+    padding: 0 15vw;
+  }
 }
 
 /* DESKTOP UP */
 @media (min-width: 1200px) {
-
+  .songs {
+    flex-direction: row;
+    padding: 0 3rem;
+  }
+  .track {
+    width: 50%;
+  }
+  .track-name {
+    font-size: 2rem;
+  }
+  .track-number {
+    padding-top: 0.5rem;
+  }
+  .track-lyrics p {
+    font-size: 1rem;
+    line-height: 1.2rem;
+    font-weight: 300;
+  }
 }
 
 /* BIG DESKTOP UP */
