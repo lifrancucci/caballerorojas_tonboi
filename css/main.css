@@ -1,5 +1,7 @@
 /* ----------------- MAIN STYLES ----------------- */
 body {
+  align-items: center;
+  justify-content: center;
   font-family: 'Spartan', sans-serif;
   margin: 0;
   padding: 0;
@@ -16,28 +18,30 @@ a {
   overflow: hidden;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  width: 100vw;
+  max-width: 100vw;
+  max-height: 100vh;
 }
 .hero-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 85vh;
+  justify-content: flex-start;
+  width: 100%;
+  height: 75vh;
 }
 .hero-cr {
-  font-size: 5rem;
+  font-size: 2em;
   font-weight: 300;
-  padding-top: 1rem;
+  padding-top: 0.2em;
+  padding-right: 0.2em;
   transform: rotate(-45deg);
   z-index: 1;
 }
 .hero-figures {
   display: flex;
   margin: 10vh auto;
-  height: 80vw;
-  width: 80vw;
+  height: 75vw;
+  width: 75vw;
   align-items: center;
   justify-content: center;
   transform: rotate(45deg);
@@ -47,8 +51,8 @@ a {
   box-sizing: border-box;
   align-items: center;
   justify-content: center;
-  height: 75%;
-  width: 75%;
+  height: 80%;
+  width: 80%;
 }
 .figure1 {
   background-color: black;
@@ -74,7 +78,7 @@ a {
 }
 .figure2 {
   background-color: white;
-  border: 10px solid white;
+  border: 20px solid white;
   animation: fig2-anim 5s infinite linear;
 }
 @keyframes fig2-anim {
@@ -95,7 +99,7 @@ a {
 }
 .figure3 {
   background-color: white;
-  border: 60px solid black;
+  border: 30px solid black;
   animation: fig3-anim 5s infinite linear;
 }
 @keyframes fig3-anim {
@@ -113,7 +117,6 @@ a {
   }
 }
 
-
 /* ----------------- LINKS SECTION ----------------- */
 .nav {
   display: flex;
@@ -130,21 +133,21 @@ a {
   align-items: center;
   display: flex;
   flex-direction: row;
-  font-size: 3.5rem;
-  font-weight: 100;
+  font-size: 1.5rem;
   text-align: center;
   text-transform: lowercase;
   padding-left: 0.7rem;
   margin-bottom: 2.5rem;
 }
 .nav-name {
+  font-weight: 100;
   letter-spacing: -0.05rem;
-  padding: 1rem;
+  padding-right: 1rem;
 }
 .nav-record {
   font-weight: 300;
   letter-spacing: 0.8rem;
-  padding: 1rem;
+  padding-left: 1rem;
 }
 .nav li {
   text-align: center;
@@ -155,8 +158,8 @@ a {
   display: inline-block;
 }
 .nav-link i {
-  padding: 0 6rem;
-  font-size: 3.5rem;
+  padding: 0 2rem;
+  font-size: 1.5rem;
 }
 .fixed-nav .nav {
   position: fixed;
@@ -184,7 +187,16 @@ a {
   margin-left: auto;
   margin-right: auto;
   width: 150vw;
+  opacity: 1;
 }
+/* .album-cover img:hover {
+  animation: changeOpacity 0.5s ease-in-out;
+}
+@keyframes changeOpacity {
+  100% {
+    opacity: 1;
+  }
+} */
 .cover-gradient {
   pointer-events: none;
   box-sizing: border-box;
@@ -193,6 +205,7 @@ a {
   position: absolute;
   width: 810px;
   height: 810px;
+  z-index: 1;
 }
 
 /* ----------------- SONGS SECTION ----------------- */
@@ -201,14 +214,16 @@ a {
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
+  width: 100vw;
+  margin-bottom: 5vh;
 }
 .track {
   display: flex;
   flex-direction: row;
   width: 80%;
   min-height: 700px;
-  overflow: hidden;
   padding-bottom: 2.5rem;
+  overflow: hidden;
 }
 .track-name {
   display: flex;
@@ -255,7 +270,7 @@ a {
 }
 .media-player {
   background-color: grey;
-  width: 700px;
+  width: 590px;
   height: 6rem;
   margin-top: 1rem;
 }
@@ -269,73 +284,26 @@ a {
 /* ----------------- MEDIA QUERIES ----------------- */
 
 /* ORIENTATION */
-@media screen and (orientation: landscape)  {
+/* @media screen and (orientation: landscape)  {
   .hero-figures {
     width: 65vh;
     height: 65vh;
   }
+} */
+
+/* FOR PHONE ONLY */
+@media (max-width: 599px) {
+
 }
 
 /* TABLET PORTRAIT UP */
 @media (min-width: 600px) {
-  .nav-title {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-  }
-  .nav-link i {
-    font-size: 3rem;
-    padding: 0 5rem;
-  }
+
 }
 
 /* TABLET LANDSCAPE UP */
 @media (min-width: 900px) {
-  .figure3 {
-    border: 30px solid black;
-  }
-  .hero-cr {
-    font-size: 3.5rem;
-  }
-  .nav-title {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-  }
-  .nav-link {
-    padding-bottom: 1rem;
-  }
-  .nav-link i {
-    font-size: 2rem;
-    padding: 0 5rem;
-  }
-  .cover-container {
-    width: 500px;
-    height: 500px;
-  }
-  .album-cover img {
-    width: 90vw;
-  }
-  .cover-gradient {
-    width: 510px;
-    height: 510px;
-  }
-  /* .track {
-    border: 1px solid red;
-  } */
-  .track-name {
-    font-size: 2rem;
-  }
-  .track-number {
-    font-size: 3rem;
-    padding-top: 0.5rem;
-    width: 4.5rem;
-    height: 4.5rem;
-  }
-  .track-lyrics p {
-    font-size: 1.2rem;
-  }
-  .media-player {
-    height: 4.5rem;
-  }
+
 }
 
 /* DESKTOP UP */
