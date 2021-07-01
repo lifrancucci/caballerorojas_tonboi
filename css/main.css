@@ -5,6 +5,8 @@ body {
   font-family: 'Spartan', sans-serif;
   margin: 0;
   padding: 0;
+  width: 100vw;
+  overflow-x: hidden;
 }
 a {
   color: inherit;
@@ -18,8 +20,8 @@ a {
   overflow: hidden;
   align-items: center;
   justify-content: center;
-  max-width: 100vw;
-  max-height: 100vh;
+  width: 100vw;
+  min-height: 100vh;
 }
 .hero-section {
   display: flex;
@@ -178,8 +180,8 @@ a {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  width: 800px;
-  height: 800px;
+  width: 400px;
+  height: 400px;
   overflow: hidden;
 }
 .album-cover img {
@@ -189,49 +191,40 @@ a {
   width: 150vw;
   opacity: 1;
 }
-/* .album-cover img:hover {
-  animation: changeOpacity 0.5s ease-in-out;
-}
-@keyframes changeOpacity {
-  100% {
-    opacity: 1;
-  }
-} */
 .cover-gradient {
   pointer-events: none;
   box-sizing: border-box;
   background-image:
     radial-gradient(transparent 50%, white 65%);
   position: absolute;
-  width: 810px;
-  height: 810px;
+  width: 400px;
+  height: 400px;
   z-index: 1;
 }
 
 /* ----------------- SONGS SECTION ----------------- */
 .songs {
+  /* border: 1px solid blue; */
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
-  width: 100vw;
+  max-width: 100vw;
   margin-bottom: 5vh;
 }
 .track {
+  /* border: 1px solid green; */
   display: flex;
   flex-direction: row;
-  width: 80%;
-  min-height: 700px;
   padding-bottom: 2.5rem;
   overflow: hidden;
 }
 .track-name {
+  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 3rem;
-  padding: 0 2rem 2rem 2rem;
-  max-width: 15rem;
+  font-size: 1.5rem;
+  padding: 0 1rem 2rem 2rem;
   margin-left: -1rem;
   background-image:
     linear-gradient(to right, white 90%, transparent);
@@ -239,7 +232,7 @@ a {
 }
 .track-name h3 {
   align-self: center;
-  padding-top: 3rem;
+  padding-top: 1.5rem;
   font-weight: 300;
   text-transform: lowercase;
   writing-mode: vertical-lr;
@@ -251,8 +244,8 @@ a {
   justify-content: center;
   background-color: black;
   color: white;
-  width: 6rem;
-  height: 6rem;
+  width: 3rem;
+  height: 3rem;
   text-align: center;
   margin-top: 1rem;
 }
@@ -265,18 +258,20 @@ a {
   }
 }
 .track-interactive {
-  padding-right: 3rem;
+  /* border: 1px solid yellow; */
+  padding: 0 2rem;
   transform: translateX(-120%);
+  width: 100%;
 }
 .media-player {
   background-color: grey;
-  width: 590px;
-  height: 6rem;
+  width: 100%;
+  height: 3rem;
   margin-top: 1rem;
 }
 .track-lyrics p {
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
   padding-top: 3rem;
   text-transform: lowercase;
 }
