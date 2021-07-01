@@ -288,8 +288,32 @@ a {
 }
 
 /* FOR PHONE ONLY */
-@media (max-width: 599px) {
-
+@media (max-width: 399px) {
+  .hero-cr {
+    font-size: 1.5rem;
+  }
+  .hero-figures {
+    min-width: 300px;
+    min-height: 300px;
+  }
+  .nav {
+    height: 5vh;
+  }
+  .nav-title {
+    flex-direction: column;
+    margin-bottom: 1rem;
+    line-height: 2rem;
+  }
+  .nav-record {
+    padding-left: 0;
+  }
+  .fixed-nav .nav-title {
+    display: none;
+    background-color: red;
+  }
+  .track-interactive {
+    padding-left: 0;
+  }
 }
 
 /* TABLET PORTRAIT UP */
@@ -361,6 +385,8 @@ a {
 }
 
 /* BIG DESKTOP UP */
-@media (min-width: 1800px) {
-
+@media (min-width: 1400px) {
+  .track {
+    width: 25%;
+  }
 }
