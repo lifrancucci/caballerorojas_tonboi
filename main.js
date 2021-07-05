@@ -14,28 +14,13 @@ function contentLoaded() {
 
   window.addEventListener('scroll', fixNav);
 
-  // MEDIA PLAYER
-  // Get elements
-  const player = document.querySelector('.media-player');
+  // LYRICS
+  const trackName = document.querySelectorAll('.track-name');
 
-  const track1 = player.querySelector('.track1');
-  // const track2 = player.querySelector('.track2');
-  // const track3 = player.querySelector('.track3');
-  // const track4 = player.querySelector('.track4');
+  function lyricsAppear() {
+    console.log("lyrics appearing!")
+  };
 
-  const progress = player.querySelector('.progress');
-  const progressBar = player.querySelector('.progress_filled');
-  const toggle = player.querySelector('.toggle');
+  trackName.forEach(track => track.addEventListener('click', lyricsAppear));
 
-  // Build functions
-  function togglePlay() {
-    if(track1.paused){
-      track1.play();
-    } else {
-      track1.pause();
-    }
-  }
-
-  // Hook up Event Listeners
-  toggle.addEventListener('click', togglePlay);
 }

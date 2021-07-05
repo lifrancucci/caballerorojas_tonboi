@@ -282,6 +282,12 @@ a {
 }
 
 /* ----------------- MEDIA QUERIES ----------------- */
+/* DISABLE HOVER FOR MOBILE */
+@media (hover: none) {
+  .track-interactive {
+    transform: translateX(0%);
+  }
+}
 
 /* ORIENTATION */
 @media screen and (orientation: landscape)  {
@@ -292,7 +298,7 @@ a {
 }
 
 /* FOR PHONE ONLY */
-@media (max-width: 399px) {
+@media (max-width: 599px) {
   .hero-cr {
     font-size: 1.5rem;
   }
@@ -423,12 +429,6 @@ a {
   }
   .track {
     width: 25%;
-  }
-  .track-name {
-    font-size: 1.5rem;
-  }
-  .track-number {
-    font-size: 1.5rem;
   }
   .track-lyrics p {
     font-size: 1.2rem;
