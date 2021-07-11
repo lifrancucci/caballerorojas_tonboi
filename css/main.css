@@ -260,7 +260,7 @@ a {
 .track-interactive {
   /* border: 1px solid yellow; */
   padding: 0 2rem;
-  transform: translateX(-120%);
+  /* transform: translateX(-120%); */
   width: 100%;
 }
 .media-player {
@@ -419,11 +419,15 @@ a {
     padding-top: 0.5rem;
   }
   .track-interactive {
+    transform: translate(-120%);
     padding-left: 0.5rem;
   }
-  .track-name:hover + .track-interactive {
+  .interactive-display {
     animation: lyrics-appear 0.5s forwards ease-out;
   }
+  /* .track-name:hover + .track-interactive {
+    animation: lyrics-appear 0.5s forwards ease-out;
+  } */
   @keyframes lyrics-appear {
     100% {
       transform: translateX(0%);
