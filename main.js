@@ -14,9 +14,10 @@ function contentLoaded() {
 
   window.addEventListener('scroll', fixNav);
 
-  // LYRICS
+  // MEDIA PLAYER
+  const songs = document.getElementById('songs');
+  const mediaPlayer = document.querySelectorAll('.media-player')
   const trackName = document.querySelectorAll('.track-name');
-  const trackInteractive = document.querySelectorAll('.track-interactive');
 
   const interactive1 = document.getElementById('interactive1');
   const interactive2 = document.getElementById('interactive2');
@@ -44,9 +45,27 @@ function contentLoaded() {
     } else {
       interactive4.classList.remove('interactive-display');
     }
-
   };
+
+  function lyricsHide() {
+    interactive1.classList.remove('interactive-display');
+    interactive2.classList.remove('interactive-display');
+    interactive3.classList.remove('interactive-display');
+    interactive4.classList.remove('interactive-display');
+  }
 
   trackName.forEach(track => track.addEventListener('mouseenter', lyricsAppear));
 
+  songs.addEventListener('mouseleave', lyricsHide);
+
+  // Pause other players when one is active
+  document.addEventListener('play', function(e){
+    let audios = document.getElementsByTagName('audio');
+    for(var i = 0, len = audios.length; i < len;i++){
+        if(audios[i] != e.target){
+            audios[i].pause();
+            audios[i].currentTime = 0;
+        }
+    }
+  }, true);
 }
