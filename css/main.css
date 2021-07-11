@@ -27,9 +27,9 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: flex-start;
+  justify-content: flex-start;
   width: 100%;
-  height: 75vh; */
+  height: 75vh;
 }
 .hero-cr {
   font-size: 2em;
@@ -126,7 +126,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   background-color: white;
   height: 15vh;
   width: 100%;
@@ -134,15 +134,11 @@ a {
   z-index: 99;
 }
 .nav-title {
-  align-items: center;
   display: flex;
-  flex-direction: row;
   font-size: 1.5rem;
   text-align: center;
   text-transform: lowercase;
   padding-left: 0.7rem;
-  margin-top: 0.5rem;
-  margin-bottom: 1.2rem;
 }
 .nav-name {
   font-weight: 100;
@@ -300,6 +296,10 @@ a {
 
 /* FOR PHONE ONLY */
 @media (max-width: 599px) {
+  .header {
+    width: 100vw;
+    height: 100vh;
+  }
   .hero-cr {
     font-size: 1.5rem;
   }
@@ -308,7 +308,6 @@ a {
     min-height: 280px;
   }
   .nav {
-    height: 5vh;
   }
   .nav-title {
     flex-direction: column;
