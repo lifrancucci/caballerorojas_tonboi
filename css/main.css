@@ -29,7 +29,7 @@ a {
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  height: 75vh;
+  height: 65vh;
 }
 .hero-cr {
   font-size: 2em;
@@ -42,10 +42,8 @@ a {
 .hero-figures {
   display: flex;
   margin: 10vh auto;
-  height: 60vw;
-  max-height: 600px;
-  width: 60vw;
-  max-width: 600px;
+  height: 400px;
+  width: 400px;
   align-items: center;
   justify-content: center;
   transform: rotate(45deg);
@@ -203,7 +201,6 @@ a {
 
 /* ----------------- SONGS SECTION ----------------- */
 .songs {
-  /* border: 1px solid blue; */
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -211,7 +208,6 @@ a {
   margin-bottom: 5vh;
 }
 .track {
-  /* border: 1px solid green; */
   display: flex;
   flex-direction: row;
   margin-top: 1rem;
@@ -219,7 +215,6 @@ a {
   overflow: hidden;
 }
 .track-name {
-  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -249,18 +244,9 @@ a {
   text-align: center;
   margin-top: 1rem;
 }
-/* .track-name:hover + .track-interactive {
-  animation: lyrics-appear 0.5s forwards ease-out;
-}
-@keyframes lyrics-appear {
-  100% {
-    transform: translateX(0%);
-  }
-} */
+
 .track-interactive {
-  /* border: 1px solid yellow; */
   padding: 0 2rem;
-  /* transform: translateX(-120%); */
   width: 100%;
 }
 .media-player {
@@ -286,14 +272,6 @@ a {
   }
 }
 
-/* ORIENTATION */
-@media screen and (orientation: landscape)  {
-  .hero-figures {
-    width: 50vh;
-    height: 50vh;
-  }
-}
-
 /* FOR PHONE ONLY */
 @media (max-width: 599px) {
   .header {
@@ -304,8 +282,8 @@ a {
     font-size: 1.5rem;
   }
   .hero-figures {
-    min-width: 280px;
-    min-height: 280px;
+    width: 280px;
+    height: 280px;
   }
   .nav {
   }
@@ -400,10 +378,6 @@ a {
 
 /* DESKTOP UP */
 @media (min-width: 1200px) {
-  .hero-figures {
-    width: 450px;
-    height: 450px;
-  }
   .songs {
     flex-direction: row;
     padding: 0 3rem;
@@ -425,9 +399,6 @@ a {
   .interactive-display {
     animation: lyrics-appear 0.5s forwards ease-out;
   }
-  /* .track-name:hover + .track-interactive {
-    animation: lyrics-appear 0.5s forwards ease-out;
-  } */
   @keyframes lyrics-appear {
     100% {
       transform: translateX(0%);
