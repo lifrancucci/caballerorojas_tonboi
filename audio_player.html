@@ -1,23 +1,101 @@
-<style media="screen">
+<style>
+
+  .player {
+    justify-content: space-around;
+    display: flex;
+    background-color: black;
+    width: 100%;
+  }
+  .player__controls {
+    border: 1px solid red;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+  }
+  .progress {
+    border: 1px solid green;
+    flex: 10;
+    position: relative;
+    display: flex;
+    flex-basis: 100%;
+    height: 5px;
+    width: 400px;
+    transition: height 0.3s;
+    background: rgba(0,0,0,0.5);
+    cursor: ew-resize;
+    margin: 0 2rem;
+  }
+
+  .progress__filled {
+    width: 50%;
+    background: #ffc600;
+    flex: 0;
+    flex-basis: 0;
+  }
 
 </style>
 
-<div class="">
-
-</div>
+<body>
+  <div class="player">
+    <audio class="player__audio audio" src="audio/ton_boi.mp3"></audio>
+    <div class="player__controls">
+      <button class="player__button toggle" title="Toggle Play">▶</button>
+      <div class="progress">
+        <div class="progress__filled"></div>
+      </div>
+      <input class="volume" type="range" name="volume" min=0 max="1" step="0.05" value="1">
+    </div>
+  </div>
+</body>
 
 <script>
+  const player = document.querySelector('.player');
+  const audio = player.querySelector('.audio');
+  const progress = player.querySelector('.progress');
+  const progressBar = player.querySelector('.progress__filled');
+  const toggle = player.querySelector('.toggle');
+  const volume = player.querySelector('.volume');
 
-  $("audio").mediaelementplayer({
-    // API options
-    alwaysShowControls: true,
-    features: ['playpause', 'progress', 'volume'],
-    audioVolume: 'horizontal',
-    audioWidth: 450,
-    audioHeight: 70,
-    iPadUseNativeControls: true,
-    iPhoneUseNativeControls: true,
-    AndroidUseNativeControls: true
-  });
+  function togglePlay() {
+    const method = audio.paused ? 'play' : 'pause';
+    audio[method]();
+  }
+
+  function updateButton() {
+    const icon = this.paused ? '▶' : '❚❚';
+    toggle.textContent = icon;
+    console.log(icon);
+  }
+
+  function handleRangeUpdate() {
+    audio['volume'] = this.value;
+  }
+
+  function handleProgress() {
+    const percent = (audio.currentTime / audio.duration) * 100;
+    progressBar.style.flexBasis = `${percent}%`;
+  }
+
+  audio.addEventListener('play', updateButton);
+  audio.addEventListener('pause', updateButton);
+  audio.addEventListener('timeUpdate', handleProgress);
+
+  toggle.addEventListener('click', togglePlay);
+
+  volume.addEventListener('change', handleRangeUpdate);
+  volume.addEventListener('mousemove', handleRangeUpdate);
+
+
+  // $("audio").mediaelementplayer({
+  //   // API options
+  //   alwaysShowControls: true,
+  //   features: ['playpause', 'progress', 'volume'],
+  //   audioVolume: 'horizontal',
+  //   audioWidth: 450,
+  //   audioHeight: 70,
+  //   iPadUseNativeControls: true,
+  //   iPhoneUseNativeControls: true,
+  //   AndroidUseNativeControls: true
+  // });
 
 </script>
