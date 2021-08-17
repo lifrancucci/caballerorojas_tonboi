@@ -3,13 +3,13 @@
   box-sizing: border-box;
 }
 body {
-  align-items: center;
-  justify-content: center;
+  /* align-items: center;
+  justify-content: center; */
   font-family: 'Spartan', sans-serif;
   margin: 0;
   padding: 0;
-  width: 100vw;
-  overflow-x: hidden;
+  max-width: 100vw;
+  /* overflow-x: hidden; */
 }
 a {
   color: inherit;
@@ -18,13 +18,14 @@ a {
 
 /* ----------------- HEADER SECTION ----------------- */
 .header {
+  /* border: 1px solid green; */
   display: flex;
   flex-direction: column;
   overflow: hidden;
   align-items: center;
   justify-content: center;
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
 }
 .figures-section {
   display: flex;
