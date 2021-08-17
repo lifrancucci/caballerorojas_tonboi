@@ -126,11 +126,12 @@ a {
 
 /* ----------------- LINKS SECTION ----------------- */
 .nav {
-  /* border: 1px solid green; */
+  /* border: 3px solid red; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  /* justify-content: space-around; */
+  position: relative;
   background-color: white;
   height: 20vh;
   width: 100%;
@@ -141,10 +142,14 @@ a {
   /* border: 1px solid blue; */
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   font-size: 1.5rem;
   text-align: center;
   text-transform: lowercase;
+  position: absolute;
+  top: 0;
   padding-left: 1rem;
+  /* padding-bottom: 1em; */
 }
 .nav-title > * {
   padding-top: 0.5rem;
@@ -159,7 +164,9 @@ a {
   letter-spacing: 0.9rem;
 }
 .nav-links {
-  height: 5vh;
+  /* border: 1px solid green; */
+  position: absolute;
+  bottom: 0;
 }
 .nav-links li {
   text-align: center;
@@ -170,7 +177,7 @@ a {
   display: inline-block;
 }
 .nav-link i {
-  padding: 0 2rem;
+  padding: 0 2rem 0.5rem 2rem;
   font-size: 1.5rem;
 }
 .fixed-nav .nav {
@@ -183,9 +190,6 @@ a {
     box-shadow: 0 3px 10px lightgray;
   }
 }
-/* .fixed-nav .nav-title {
-  display: none;
-} */
 
 /* ----------------- COVER SECTION ----------------- */
 .album-cover {
@@ -293,7 +297,7 @@ a {
 @media screen and (max-width: 360px) {
 
 }
-/* TABLET PORTRAIT UP */
+/* SMALL TABLET PORTRAIT UP */
 @media screen and (min-width: 600px) {
   .header-figures {
     width: 65vw;
@@ -319,9 +323,18 @@ a {
   }
 }
 
-/* TABLET PORTRAIT UP */
+/* BIG TABLET PORTRAIT UP */
 @media screen and (min-width: 900px) {
-
+  .header-cr {
+    font-size: 3rem;
+  }
+  .nav-title {
+    flex-direction: row;
+    font-size: 2.5rem;
+  }
+  .nav-link i {
+    font-size: 2.7rem;
+  }
 }
 /* DESKTOP UP */
 @media screen and (min-width: 1200px) {
