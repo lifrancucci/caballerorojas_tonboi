@@ -1,4 +1,7 @@
 /* ----------------- MAIN STYLES ----------------- */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
 body {
   align-items: center;
   justify-content: center;
@@ -23,27 +26,20 @@ a {
   width: 100vw;
   min-height: 100vh;
 }
-.hero-section {
+.figures-section {
+  /* border: 1px solid red; */
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: center;
-  justify-content: flex-start;
+  /* justify-content: center; */
   width: 100%;
-  height: 65vh;
+  height: 80vh;
 }
-.hero-cr {
-  font-size: 2em;
-  font-weight: 300;
-  padding-top: 0.2em;
-  padding-right: 0.2em;
-  transform: rotate(-45deg);
-  z-index: 1;
-}
-.hero-figures {
+.header-figures {
   display: flex;
   margin: 10vh auto;
-  height: 400px;
-  width: 400px;
+  height: 75vw;
+  width: 75vw;
   align-items: center;
   justify-content: center;
   transform: rotate(45deg);
@@ -56,12 +52,12 @@ a {
   height: 80%;
   width: 80%;
 }
-.figure1 {
+.outer {
   background-color: black;
   border: 10px solid black;
-  animation: fig1-anim 5s infinite linear;
+  animation: outer-anim 5s infinite linear;
 }
-@keyframes fig1-anim {
+@keyframes outer-anim {
   0%, 24% {
     background-color: black
   }
@@ -78,12 +74,12 @@ a {
 
   }
 }
-.figure2 {
+.mid {
   background-color: white;
   border: 20px solid white;
-  animation: fig2-anim 5s infinite linear;
+  animation: mid-anim 5s infinite linear;
 }
-@keyframes fig2-anim {
+@keyframes mid-anim {
   0%, 24% {
     background-color: white;
     border-color: black white;
@@ -99,12 +95,12 @@ a {
     background-color: white;
   }
 }
-.figure3 {
+.inner {
   background-color: white;
-  border: 30px solid black;
-  animation: fig3-anim 5s infinite linear;
+  border: 5vw solid black;
+  animation: inner-anim 5s infinite linear;
 }
-@keyframes fig3-anim {
+@keyframes inner-anim {
   0% {
     border-color: black white;
   }
@@ -118,25 +114,40 @@ a {
     border-color: black white;
   }
 }
+.header-cr {
+  font-size: 1.5em;
+  font-weight: 300;
+  padding-top: 0.2em;
+  padding-right: 0.2em;
+  transform: rotate(-45deg);
+  font-weight: normal;
+  z-index: 1;
+}
 
 /* ----------------- LINKS SECTION ----------------- */
 .nav {
+  /* border: 1px solid green; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   background-color: white;
-  height: 15vh;
+  height: 20vh;
   width: 100%;
   top: 0;
   z-index: 99;
 }
 .nav-title {
+  /* border: 1px solid blue; */
   display: flex;
+  flex-direction: column;
   font-size: 1.5rem;
   text-align: center;
   text-transform: lowercase;
-  padding-left: 0.7rem;
+  padding-left: 1rem;
+}
+.nav-title > * {
+  padding-top: 0.5rem;
 }
 .nav-name {
   font-weight: 100;
@@ -145,8 +156,8 @@ a {
 }
 .nav-record {
   font-weight: 300;
-  letter-spacing: 0.8rem;
-  padding-left: 1rem;
+  letter-spacing: 0.9rem;
+  /* padding-left: 1rem; */
 }
 .nav li {
   text-align: center;
@@ -265,157 +276,3 @@ a {
 }
 
 /* ----------------- MEDIA QUERIES ----------------- */
-/* DISABLE HOVER FOR MOBILE */
-@media (hover: none) {
-  .track-interactive {
-    transform: translateX(0%);
-  }
-}
-
-/* FOR PHONE ONLY */
-@media (max-width: 599px) {
-  .header {
-    width: 100vw;
-    height: 100vh;
-  }
-  .hero-cr {
-    font-size: 1.5rem;
-  }
-  .hero-figures {
-    width: 280px;
-    height: 280px;
-  }
-  .nav {
-  }
-  .nav-title {
-    flex-direction: column;
-    margin-bottom: 1rem;
-    line-height: 2rem;
-  }
-  .nav-record {
-    padding-left: 0;
-  }
-  .track-interactive {
-    padding-left: 0;
-  }
-  .fixed-nav .nav {
-    position: relative;
-  }
-  .track {
-    padding-left: 1rem;
-  }
-}
-
-/* TABLET PORTRAIT UP */
-@media (min-width: 600px) {
-  .hero-cr {
-    font-size: 2.8rem;
-  }
-  .nav-title {
-    font-size: 2rem;
-  }
-  .nav-link i {
-    font-size: 2rem;
-    padding: 0 4rem;
-  }
-  .cover-container {
-    width: 600px;
-    height: 600px;
-  }
-  .album-cover img {
-    width: 1000px;
-  }
-  .cover-gradient {
-    width: 600px;
-    height: 600px;
-  }
-  .songs {
-    padding: 0 3rem;
-  }
-  .track-name {
-    font-size: 2rem;
-  }
-  .track-number {
-    padding-top: 0.5rem;
-  }
-  .track-lyrics p {
-    font-size: 1.2rem;
-    line-height: 1.7rem;
-    font-weight: 100;
-  }
-}
-
-/* PHONE ONLY LANDSCAPE */
-@media (max-height: 399px) and (orientation: landscape){
-  .hero-figures {
-    display: none;
-  }
-  .fixed-nav .nav {
-    position: relative;
-  }
-  .album-cover {
-    height: 100vh;
-  }
-  .cover-container {
-    width: 300px;
-    height: 300px;
-  }
-  .album-cover img {
-    width: 500px;
-  }
-  .cover-gradient {
-    width: 300px;
-    height: 300px;
-  }
-}
-
-/* TABLET LANDSCAPE UP */
-@media (min-width: 900px) {
-  .songs {
-    padding: 0 15vw;
-  }
-}
-
-/* DESKTOP UP */
-@media (min-width: 1200px) {
-  .songs {
-    flex-direction: row;
-    padding: 0 3rem;
-    min-height: 80vh;
-  }
-  .track {
-    width: 50%;
-  }
-  .track-name {
-    font-size: 2rem;
-  }
-  .track-number {
-    padding-top: 0.5rem;
-  }
-  .track-interactive {
-    transform: translate(-120%);
-    padding-left: 0.5rem;
-  }
-  .interactive-display {
-    animation: lyrics-appear 0.5s forwards ease-out;
-  }
-  @keyframes lyrics-appear {
-    100% {
-      transform: translateX(0%);
-    }
-  }
-}
-/* BIG DESKTOP UP */
-@media (min-width: 1400px) {
-  .songs {
-    max-height: 80vh;
-  }
-  .track {
-    width: 25%;
-  }
-  .track-lyrics p {
-    font-size: 1.2rem;
-    line-height: 1.3rem;
-    font-weight: 100;
-  }
-}
