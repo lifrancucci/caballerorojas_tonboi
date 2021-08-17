@@ -177,36 +177,40 @@ a {
 
 /* ----------------- COVER SECTION ----------------- */
 .album-cover {
+  /* border: 3px solid red; */
+  display: flex;
   align-items: center;
   justify-content: center;
-  display: flex;
-  height: 85vh;
-  width: 100vw;
+  height: 100vh;
+  max-width: 100vw;
   overflow: hidden;
 }
 .cover-container {
+  /* border: 3px solid blue; */
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  width: 400px;
-  height: 400px;
+  width: 90vw;
+  height: 90vw;
   overflow: hidden;
+  background-image:
+    radial-gradient(transparent 10%, white 35%);
 }
 .album-cover img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 700px;
-  opacity: 1;
+  width: 90vw;
 }
+
 .cover-gradient {
+  /* border: 3px solid red; */
   pointer-events: none;
-  box-sizing: border-box;
   background-image:
-    radial-gradient(transparent 50%, white 65%);
+    radial-gradient(transparent 45%, white 65%);
   position: absolute;
-  width: 400px;
-  height: 400px;
+  width: 90vw;
+  height: 90vw;
   z-index: 1;
 }
 
