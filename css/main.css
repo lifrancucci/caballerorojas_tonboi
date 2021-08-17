@@ -198,7 +198,6 @@ a {
   overflow: hidden;
 }
 .cover-container {
-  /* border: 3px solid blue; */
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -214,9 +213,7 @@ a {
   margin-right: auto;
   width: 90vw;
 }
-
 .cover-gradient {
-  /* border: 3px solid red; */
   pointer-events: none;
   background-image:
     radial-gradient(transparent 45%, white 65%);
@@ -271,7 +268,6 @@ a {
   text-align: center;
   margin-top: 1rem;
 }
-
 .track-interactive {
   padding: 0 2rem;
   width: 100%;
@@ -285,7 +281,7 @@ a {
 }
 .track-lyrics p {
   font-size: 0.8rem;
-  line-height: 1.2rem;
+  line-height: 1.2;
   padding-top: 1rem;
   padding-left: 0.3rem;
   text-transform: lowercase;
@@ -312,9 +308,18 @@ a {
   .nav-link i {
     font-size: 2.3rem;
   }
+  .songs {
+    padding: 0 3rem;
+  }
+  .track-name h3 {
+    font-size: 2rem;
+  }
+  .track-lyrics p {
+    font-size: 1.2rem;
+  }
 }
 
-/* TABLET LANDSCAPE UP */
+/* TABLET PORTRAIT UP */
 @media screen and (min-width: 900px) {
 
 }
@@ -327,7 +332,33 @@ a {
 
 }
 
-/* PORTRAIT ORIENTATION */
-@media screen and (orientation: portrait) {
-
+/* LANDSCAPE ORIENTATION */
+@media screen and (orientation: landscape) {
+  .header-figures {
+    width: 65vh;
+    height: 65vh;
+  }
+  .nav-title {
+    flex-direction: row;
+  }
+  .cover-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 90vh;
+    height: 90vh;
+    overflow: hidden;
+    background-image:
+      radial-gradient(transparent 10%, white 35%);
+  }
+  .album-cover img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90vh;
+  }
+  .cover-gradient {
+    width: 90vh;
+    height: 90vh;
+  }
 }
