@@ -180,6 +180,7 @@ a {
 @keyframes reduce {
   100% {
     transform: translateY(-12vh);
+    box-shadow: 0 3px 10px lightgray;
   }
 }
 /* .fixed-nav .nav-title {
@@ -291,3 +292,42 @@ a {
 }
 
 /* ----------------- MEDIA QUERIES ----------------- */
+
+/* SMALL DEVICES DOWN */
+@media screen and (max-width: 360px) {
+
+}
+/* TABLET PORTRAIT UP */
+@media screen and (min-width: 600px) {
+  .header-figures {
+    width: 65vw;
+    height: 65vw;
+  }
+  .header-cr {
+    font-size: 2rem;
+  }
+  .nav-title {
+    font-size: 2rem;
+  }
+  .nav-link i {
+    font-size: 2.3rem;
+  }
+}
+
+/* TABLET LANDSCAPE UP */
+@media screen and (min-width: 900px) {
+
+}
+/* DESKTOP UP */
+@media screen and (min-width: 1200px) {
+
+}
+/* BIG DESKTOP UP */
+@media screen and (min-width: 1800px) {
+
+}
+
+/* PORTRAIT ORIENTATION */
+@media screen and (orientation: portrait) {
+
+}
