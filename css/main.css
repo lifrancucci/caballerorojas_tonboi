@@ -157,9 +157,11 @@ a {
 .nav-record {
   font-weight: 300;
   letter-spacing: 0.9rem;
-  /* padding-left: 1rem; */
 }
-.nav li {
+.nav-links {
+  height: 5vh;
+}
+.nav-links li {
   text-align: center;
   display: inline-block;
 }
@@ -173,7 +175,16 @@ a {
 }
 .fixed-nav .nav {
   position: fixed;
+  animation: reduce 1s forwards;
 }
+@keyframes reduce {
+  100% {
+    transform: translateY(-12vh);
+  }
+}
+/* .fixed-nav .nav-title {
+  display: none;
+} */
 
 /* ----------------- COVER SECTION ----------------- */
 .album-cover {
