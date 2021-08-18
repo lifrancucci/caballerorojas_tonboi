@@ -1,0 +1,159 @@
+/* DISABLE HOVER FOR MOBILE */
+@media (hover: none) {
+  .track-interactive {
+    transform: translateX(0%);
+  }
+}
+
+/* FOR PHONE ONLY */
+@media (max-width: 599px) {
+  .header {
+    width: 100vw;
+    height: 100vh;
+  }
+  .hero-cr {
+    font-size: 1.5rem;
+  }
+  .hero-figures {
+    width: 280px;
+    height: 280px;
+  }
+  .nav-title {
+    flex-direction: column;
+    margin-bottom: 1rem;
+    line-height: 2rem;
+  }
+  .nav-record {
+    padding-left: 0;
+  }
+  .track-interactive {
+    padding-left: 0;
+  }
+  .fixed-nav .nav {
+    position: relative;
+  }
+  .track {
+    padding-left: 1rem;
+  }
+}
+
+/* TABLET PORTRAIT UP */
+@media (min-width: 600px) {
+  .hero-cr {
+    font-size: 1.5rem;
+  }
+  .hero-figures {
+    width: 280px;
+    height: 280px;
+  }
+  .nav-title {
+    font-size: 2rem;
+  }
+  .nav-link i {
+    font-size: 2rem;
+    padding: 0 4rem;
+  }
+  .cover-container {
+    width: 600px;
+    height: 600px;
+  }
+  .album-cover img {
+    width: 1000px;
+  }
+  .cover-gradient {
+    width: 600px;
+    height: 600px;
+  }
+  .songs {
+    padding: 0 3rem;
+  }
+  .track-name {
+    font-size: 2rem;
+  }
+  .track-number {
+    padding-top: 0.5rem;
+  }
+  .track-lyrics p {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    font-weight: 100;
+  }
+}
+
+/* PHONE ONLY LANDSCAPE */
+@media (max-height: 399px) and (orientation: landscape){
+  .hero-section {
+    display: none;
+  }
+  .nav {
+    height: 50vh;
+  }
+  .fixed-nav .nav {
+    position: relative;
+  }
+  .album-cover {
+    height: 100vh;
+  }
+  .cover-container {
+    width: 300px;
+    height: 300px;
+  }
+  .album-cover img {
+    width: 500px;
+  }
+  .cover-gradient {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* TABLET LANDSCAPE UP */
+@media (min-width: 900px) {
+  .songs {
+    padding: 0 15vw;
+  }
+}
+
+/* DESKTOP UP */
+@media (min-width: 1200px) {
+  .songs {
+    flex-direction: row;
+    padding: 0 3rem;
+    min-height: 80vh;
+  }
+  .track {
+    width: 50%;
+  }
+  .track-name {
+    font-size: 2rem;
+  }
+  .track-number {
+    padding-top: 0.5rem;
+  }
+  .track-interactive {
+    transform: translate(-120%);
+    padding-left: 0.5rem;
+  }
+  .interactive-display {
+    animation: lyrics-appear 0.5s forwards ease-out;
+  }
+  @keyframes lyrics-appear {
+    100% {
+      transform: translateX(0%);
+    }
+  }
+}
+/* BIG DESKTOP UP */
+@media (min-width: 1400px) {
+  .songs {
+    max-height: 80vh;
+  }
+  .track {
+    width: 25%;
+  }
+  .track-lyrics p {
+    font-size: 1.2rem;
+    line-height: 1.3rem;
+    font-weight: 100;
+  }
+}
