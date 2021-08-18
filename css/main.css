@@ -3,13 +3,10 @@
   box-sizing: border-box;
 }
 body {
-  /* align-items: center;
-  justify-content: center; */
   font-family: 'Spartan', sans-serif;
   margin: 0;
   padding: 0;
   max-width: 100vw;
-  /* overflow-x: hidden; */
 }
 a {
   color: inherit;
@@ -18,7 +15,6 @@ a {
 
 /* ----------------- HEADER SECTION ----------------- */
 .header {
-  /* border: 1px solid green; */
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -233,7 +229,6 @@ a {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  /* width: 95vw; */
 }
 .track {
   display: flex;
@@ -293,10 +288,6 @@ a {
 
 /* ----------------- MEDIA QUERIES ----------------- */
 
-/* SMALL DEVICES DOWN */
-@media screen and (max-width: 360px) {
-
-}
 /* SMALL TABLET PORTRAIT UP */
 @media screen and (min-width: 600px) {
   .header-figures {
