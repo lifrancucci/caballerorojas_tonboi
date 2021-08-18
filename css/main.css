@@ -207,6 +207,15 @@ a {
   margin-left: auto;
   margin-right: auto;
   width: 90vw;
+  filter: grayscale(100%);
+}
+.album-cover img:hover {
+  animation: colorize 0.2s normal linear forwards;
+}
+@keyframes colorize {
+  100% {
+    filter: grayscale(0%);
+  }
 }
 .cover-gradient {
   pointer-events: none;
